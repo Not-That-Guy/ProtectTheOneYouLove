@@ -13,7 +13,7 @@ deploy:
   api_key:
     secure: QWsG6Z3pAngcAJ3d1sc6EYfYts1C6gA0JEsyTwosHLZCul/I4UUU6KkgnwaqLBCGS5Z5n7ICOMSfBxQY/cNF1+1LiAfgesZLVsE9EwvDjjpXA3WTma+5e7pzpk8ntZj/z3idxGUlKt0deCkry5YnTe8R/PF7cec3+RgL21Ates9BfaXVz79v00O2/DL6Fbn3CPHFOLjaZCSI8rBEi/FaO+3FsjRzO4lT8woXYXXHTZQQOnALpBfMNXeZjX91BCGSSfS+uY+LcJGKQa8y5+hrNa+1Yknp2pTP9tQ7hrF191IwadFyehOTIOQO+LH4TgKV5hTQhoRjP3lkYAKZMxRakrVtWBdEk6zc6Z9cjFynlYyZU+3uHywjxY5hnPGpdAxja9tmwmyvOxuJPbwwfkdteRIfDZe6zwB3XkstsE7rb4Ew1wf4IZdh6PZi0DSPzCzIxahngJ7xaRAyne/xG8GCd/hx138Ln70ah2aPwTa2bCik0qbk/NeW4X4psVG88mMufo0BBYolzfOf2FD15HvpQGx7MFugAXNJ0OibEfT5OPxjr5EebIEZsLIfl3j0gAVUkAMaj0MKQAua4/vUoricLNML/luTaUk2BstipYM31suInTUBU9GkrlBDD2hbL9AsorqfBIV5xmmVbDcPXSQtY/7y+GLxnwNjf9WUSLzuvrA=
   file:
-  - target/protecttheoneyou.love
+  - target/protecttheoneyoulove.love
   - target/protecttheoneyoulove-win.zip
   - target/protecttheoneyoulove-web.zip
   on:

@@ -2,7 +2,7 @@
 set -x
 
 P="protecttheoneyoulove"
-LN="protecttheoneyou"
+PL="protectheoneyou"
 LV="0.10.1" # love version
 LZ="https://bitbucket.org/rude/love/downloads/love-${LV}-win32.zip"
 
@@ -37,7 +37,7 @@ cd target/src
 # lua lib/pink/pink/pink.lua parse game.ink > game.lua
 
 # .love file
-zip -9 -r - . > "../${P}.love"
+zip -9 -r - . > "../${PL}.love"
 cd -
 
 ### .exe
@@ -45,7 +45,7 @@ if [ ! -f "target/love-win.zip" ]; then wget "$LZ" -O "target/love-win.zip"; fi
 unzip -o "target/love-win.zip" -d "target"
 tmp="target/tmp/"
 mkdir -p "$tmp/$P"
-cat "target/love-${LV}-win32/love.exe" "target/${LN}.love" > "$tmp/${P}/${P}.exe"
+cat "target/love-${LV}-win32/love.exe" "target/${PL}.love" > "$tmp/${P}/${P}.exe"
 cp  target/love-"${LV}"-win32/*dll target/love-"${LV}"-win32/license* "$tmp/$P"
 cd "$tmp"
 zip -9 -r - "$P" > "${P}-win.zip"
