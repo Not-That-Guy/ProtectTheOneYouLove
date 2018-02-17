@@ -2,6 +2,7 @@
 set -x
 
 P="protecttheoneyoulove"
+LN ="protecttheoneyou"
 LV="0.10.1" # love version
 LZ="https://bitbucket.org/rude/love/downloads/love-${LV}-win32.zip"
 
@@ -44,7 +45,7 @@ if [ ! -f "target/love-win.zip" ]; then wget "$LZ" -O "target/love-win.zip"; fi
 unzip -o "target/love-win.zip" -d "target"
 tmp="target/tmp/"
 mkdir -p "$tmp/$P"
-cat "target/love-${LV}-win32/love.exe" "target/${P}.love" > "$tmp/${P}/${P}.exe"
+cat "target/love-${LV}-win32/love.exe" "target/${LN}.love" > "$tmp/${P}/${P}.exe"
 cp  target/love-"${LV}"-win32/*dll target/love-"${LV}"-win32/license* "$tmp/$P"
 cd "$tmp"
 zip -9 -r - "$P" > "${P}-win.zip"
