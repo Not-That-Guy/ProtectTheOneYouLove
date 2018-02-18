@@ -2,7 +2,7 @@
 set -x
 
 P="protecttheoneyoulove"
-LV="0.10.1" # love version
+LV="0.10.2" # love version
 LZ="https://bitbucket.org/rude/love/downloads/love-${LV}-win32.zip"
 
 ### clean
