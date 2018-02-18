@@ -24,7 +24,7 @@ after_success:
   - "[[ -n $TRAVIS_TAG ]] && ./build.sh -l $LOVE -n $NAME deploy $TRAVIS_REPO_SLUG"
 env:
   global:
-  - NAME=ProtectTheOneYouLove
+  - NAME=protecttheoneyoulove
   - LOVE=0.10.2
   # travis encrypt GH_TOKEN=<token>
   - secure: "VhGnMhD33T4qPqxUK0unZeiKBV55JQGcCe3dnnCShLg+miQXehjBHBaCE8nT/v1EYi7psK4B6N6NGP0vrSnoAop157Z0DT7lbewVAgj0ALWg+Zb7rgfun4ZcKwS8MaIMoH/pLbl0KyU5RU3iuWCmqcMWnS0s+wA2nr6VOVkNQ+xYBoVYTIVd1W3J8LtSJ4OGXEyR5afwb16KB/SGkMurYx8Ln6ay6u+xOFVm3BA4zYFYif8IV/y4IFUV3Z5mB+dE2Gf5xEmrijkT/lYp7oQL76xm97sgPmjuewnc6h5pjY4XHtomnCZqlZos56cUElqsrI6FgfLa0nngfCK69OIBNOyf84GmE/iRE/NBQS+VxN1h4c3B0ZkptOhSIO4lux/gfd/DypPptsXcH1Kw+seepigthsLy4Dr+j/yjhYGlqlT6fx2PdN3dy7MX5gQNcBws/KXBZYJMVqRlPtQEin7VTHS9Aq1tEu7RHFBNczEUQNYTJ21RygpTx07S2gXb9Ejymwlmwxbo1zlBYiL/Pk2LnQwtaNUjaOpcHQQuM6GgKGoU/gBh3CmP0nFJLSRk7Hu2z3bFsqbq2wCz1sx1M1SEyCSkqI6zVXQu8e1f8mr9EyzDBjL2F4GWh/JNltKIVIES0aKlpfjXw8teFaAc1F1j3vHLvv2Zrmk8H4vVlM7SFnc="
