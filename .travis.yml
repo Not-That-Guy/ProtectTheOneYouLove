@@ -6,23 +6,21 @@ addons:
     packages:
     - lua5.1
     - python2.7
-script: "[[ -n $TRAVIS_TAG ]] && ./build.sh web || ./build.sh" # web only for tags# web only for tags
+script: "[[ -n $TRAVIS_TAG ]] && ./build.sh web || ./build.sh"
 deploy:
   provider: releases
   skip_cleanup: true
   api_key:
-     # travis encrypt <token>
     secure: "QWsG6Z3pAngcAJ3d1sc6EYfYts1C6gA0JEsyTwosHLZCul/I4UUU6KkgnwaqLBCGS5Z5n7ICOMSfBxQY/cNF1+1LiAfgesZLVsE9EwvDjjpXA3WTma+5e7pzpk8ntZj/z3idxGUlKt0deCkry5YnTe8R/PF7cec3+RgL21Ates9BfaXVz79v00O2/DL6Fbn3CPHFOLjaZCSI8rBEi/FaO+3FsjRzO4lT8woXYXXHTZQQOnALpBfMNXeZjX91BCGSSfS+uY+LcJGKQa8y5+hrNa+1Yknp2pTP9tQ7hrF191IwadFyehOTIOQO+LH4TgKV5hTQhoRjP3lkYAKZMxRakrVtWBdEk6zc6Z9cjFynlYyZU+3uHywjxY5hnPGpdAxja9tmwmyvOxuJPbwwfkdteRIfDZe6zwB3XkstsE7rb4Ew1wf4IZdh6PZi0DSPzCzIxahngJ7xaRAyne/xG8GCd/hx138Ln70ah2aPwTa2bCik0qbk/NeW4X4psVG88mMufo0BBYolzfOf2FD15HvpQGx7MFugAXNJ0OibEfT5OPxjr5EebIEZsLIfl3j0gAVUkAMaj0MKQAua4/vUoricLNML/luTaUk2BstipYM31suInTUBU9GkrlBDD2hbL9AsorqfBIV5xmmVbDcPXSQtY/7y+GLxnwNjf9WUSLzuvrA="
   file:
-    - target/protecttheoneyoulove.love
-    - target/protecttheoneyoulove-win.zip
-    - target/protecttheoneyoulove-web.zip
+  - target/protecttheoneyoulove.love
+  - target/protecttheoneyoulove-win.zip
+  - target/protecttheoneyoulove-web.zip
   on:
     tags: true
     all_branches: true
 after_success:
-  - "[[ -n $TRAVIS_TAG ]] && ./build.sh deploy $TRAVIS_REPO_SLUG"
+- "[[ -n $TRAVIS_TAG ]] && ./build.sh deploy $TRAVIS_REPO_SLUG"
 env:
   global:
-  # travis encrypt GH_TOKEN= <token>
-  - secure: "VhGnMhD33T4qPqxUK0unZeiKBV55JQGcCe3dnnCShLg+miQXehjBHBaCE8nT/v1EYi7psK4B6N6NGP0vrSnoAop157Z0DT7lbewVAgj0ALWg+Zb7rgfun4ZcKwS8MaIMoH/pLbl0KyU5RU3iuWCmqcMWnS0s+wA2nr6VOVkNQ+xYBoVYTIVd1W3J8LtSJ4OGXEyR5afwb16KB/SGkMurYx8Ln6ay6u+xOFVm3BA4zYFYif8IV/y4IFUV3Z5mB+dE2Gf5xEmrijkT/lYp7oQL76xm97sgPmjuewnc6h5pjY4XHtomnCZqlZos56cUElqsrI6FgfLa0nngfCK69OIBNOyf84GmE/iRE/NBQS+VxN1h4c3B0ZkptOhSIO4lux/gfd/DypPptsXcH1Kw+seepigthsLy4Dr+j/yjhYGlqlT6fx2PdN3dy7MX5gQNcBws/KXBZYJMVqRlPtQEin7VTHS9Aq1tEu7RHFBNczEUQNYTJ21RygpTx07S2gXb9Ejymwlmwxbo1zlBYiL/Pk2LnQwtaNUjaOpcHQQuM6GgKGoU/gBh3CmP0nFJLSRk7Hu2z3bFsqbq2wCz1sx1M1SEyCSkqI6zVXQu8e1f8mr9EyzDBjL2F4GWh/JNltKIVIES0aKlpfjXw8teFaAc1F1j3vHLvv2Zrmk8H4vVlM7SFnc="
+  - secure: "GZbbs/wEO1AJTVwJ0Z8fceXshxvPTXm7I3u16ueRmMj7aJPOpneR12DAlTDyu5dGP8AhovO6GCBWYTp3Oi5dQJLAUHz1a2DwCnhHlRsekUlKZgr0lfk7RgrynsY/ve5ttLV4ftMa++EcwXWX+/lWbahAaypESS0ZUY0oW5LIE6Nd4QWIND2Ht1raRffYF5SkjDmRf4tYsaDNzovREQjpD5dLP5dUjITh3eukisre5q3EXrJSMbAPiHIBxVyVmr/WV9gcuS8TpIhfZnGqX98eliQl+82D0n9AiUBPZ5Py8+mllCJj19CD1RCncunbsMHtJQnLoERif/G4sOe01NOCfVi4DsN/BWQ6TK/njQr7HF6AWC8Ukhpk4porbvnr6WCwYdWxSuzxfdQ+GRSZXrDWLXF5OUn2YIMe9SNlXK47nvL0st7vYUIPIlSgQFWPhQquByPjy0EQU7GHynSJvgu9D7RyeYkZa8XcW4lkTpo4ukycAXMgvygsqbprjvARjVZ5+D2U2eAD3BXXVbm0K5Q+BWEK31VnAuajck2kaSs75UnNMOaRDgG6Tx2hlWH0nVMFmIvQiND+CrEO/acNPCRERdScMH9fgwTz/tcxJPij8KYmKsWKnZCXqgFO5AGA1uAlkmN30m6WHQRgNYKLqXI/QTCegZOW6/auHG3WLl7gzxo="
