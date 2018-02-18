@@ -58,7 +58,7 @@ cd target
 rm -rf love.js *-web*
 git clone https://github.com/TannerRogalsky/love.js.git
 cd love.js
-git checkout 60d7ce0c0b34f4c846f80d6b04abfc40b30495f8
+git checkout 6fa910c2a28936c3ec4eaafb014405a765382e08
 git submodule update --init --recursive
 
 cd release-compatibility
